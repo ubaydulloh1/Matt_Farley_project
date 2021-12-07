@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matt Farley|Form</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../image/mf-logo.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <!-- <link rel="stylesheet" href="../../../Bulma/myBulma/bulma-0.9.3/bulma/sass/components/_all.sass"> -->
+
+    <style>
+        nav{
+            border-bottom: 1px solid #eee;
+            position: relative;
+        }
+        .nav-right{
+            display: flex;
+        }
+        .nav-right a{
+            margin: 0px 20px;
+        }
+        .nav-right svg{
+            font-size: 20px;
+            width: 18px;
+            color: #5500ff;
+        }
+        .form-avatar{
+            position: absolute !important;
+            width: 90px !important;
+            left: calc(50% - 50px) !important;
+            bottom: -50px !important;
+        }
+
+        .header h2{
+            font-size: 33px;
+            color: #333;
+            font-weight: 500;
+            width: 65%;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .name-email{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .name-email input{
+            width: 98%;
+            /* margin: 0 1%; */
+        }
+
+        .select-form{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .select-form label{
+            width: 49%;
+            position: relative;
+            /* margin: 0 1%; */
+        }
+
+        .textarea-label{
+            width: 100%;
+        }
+
+        input, select, textarea{
+            margin-bottom: 20px;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 100px 0px 150px 0px;
+        }
+
+        form .button{
+            border-radius: 35px;
+            padding: 0px 80px;
+            transition: 0.5s;
+        }
+        form .label{
+            color: #666;
+            margin-bottom:15px;
+        }
+        .select-icon{
+            position: absolute;
+            width: 20px;
+            top: 44%;
+            left: 89%;
+            z-index: 100;
+        }
+
+        @media screen and (max-width:820px) and (min-width:500px) {
+            .nav-right a:first-child{
+                display: none;
+            }
+
+            .nav-right a{
+            margin: 0px 20px;
+            }
+            .nav-right svg{
+                font-size: 20px;
+                width: 18px;
+                color: #5500ff;
+            }
+            .form-avatar{
+                width: 75px !important;
+                left: calc(50% - 37px) !important;
+                bottom: -37px !important;
+            }
+
+            .header h2{
+                font-size: 25px;
+                color: #333;
+                width: 65%;
+                text-align: center;
+                margin-top: 40px;
+            }
+
+            .name-email{
+                display: block;
+                width: 100%;
+            }
+            .name-email input{
+                width: 100%;
+                /* margin: 0 1%; */
+            }
+
+            .select-form{
+                display: block;
+            }
+            .select-form label{
+                width: 100%;
+                position: relative;
+                /* margin: 0 1%; */
+            }
+
+            input, select, textarea{
+                margin-bottom: 15px;
+            }
+
+            form{
+                margin: 80px 0px 120px 0px;
+            }
+
+            form .button{
+                border-radius: 35px;
+                padding: 0px 70px;
+            }
+            .select-icon{
+                width: 16px;
+                top: 46%;
+                left: 89%;
+            }
+        }
+
+        @media screen and (max-width:499px) {
+            
+
+            .nav-right a:first-child{
+                display: none;
+            }
+
+            .nav-right a{
+            margin: 0px;
+            }
+            .nav-right svg{
+                width: 18px;
+                color: #5500ff;
+            }
+            .form-avatar{
+                width: 65px !important;
+                left: calc(50% - 32px) !important;
+                bottom: -32px !important;
+            }
+
+            .header h2{
+                font-size: 21px;
+                color: #333;
+                width: 80%;
+                text-align: center;
+                margin-top: 40px;
+            }
+
+            .name-email{
+                display: block;
+                width: 100%;
+                font-size: 15px;
+            }
+            .name-email input{
+                width: 100%;
+                /* margin: 0 1%; */
+            }
+
+            .select-form{
+                display: block;
+            }
+            .select-form label{
+                width: 100%;
+                position: relative;
+                /* margin: 0 1%; */
+            }
+
+            input, select, textarea{
+                margin-bottom: 15px;
+            }
+
+            form{
+                margin: 60px 0px 100px 0px;
+            }
+
+            form .button{
+                border-radius: 35px;
+                padding: 0px 50px;
+            }
+            .select-icon{
+                width: 14px;
+                top: 46%;
+                left: 89%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Section -->
+
+    <nav id="navbar-container">
+        <div class="container">
+            <div class="nav">
+                <div class="logo-div">
+                    <img src="../image/mf-logo.svg" alt="">
+                </div>
+                <div class="nav-right">
+                    
+                    <a href="#">
+                        <svg class="svg-inline--fa fa-undo-alt fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="undo-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M255.545 8c-66.269.119-126.438 26.233-170.86 68.685L48.971 40.971C33.851 25.851 8 36.559 8 57.941V192c0 13.255 10.745 24 24 24h134.059c21.382 0 32.09-25.851 16.971-40.971l-41.75-41.75c30.864-28.899 70.801-44.907 113.23-45.273 92.398-.798 170.283 73.977 169.484 169.442C423.236 348.009 349.816 424 256 424c-41.127 0-79.997-14.678-110.63-41.556-4.743-4.161-11.906-3.908-16.368.553L89.34 422.659c-4.872 4.872-4.631 12.815.482 17.433C133.798 479.813 192.074 504 256 504c136.966 0 247.999-111.033 248-247.998C504.001 119.193 392.354 7.755 255.545 8z"></path></svg>
+                    </a>
+                    
+                    <a href="../index.html">
+                        <svg class="svg-inline--fa fa-times fa-w-12" aria-hidden="true" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M323.1 441l53.9-53.9c9.4-9.4 9.4-24.5 0-33.9L279.8 256l97.2-97.2c9.4-9.4 9.4-24.5 0-33.9L323.1 71c-9.4-9.4-24.5-9.4-33.9 0L192 168.2 94.8 71c-9.4-9.4-24.5-9.4-33.9 0L7 124.9c-9.4 9.4-9.4 24.5 0 33.9l97.2 97.2L7 353.2c-9.4 9.4-9.4 24.5 0 33.9L60.9 441c9.4 9.4 24.5 9.4 33.9 0l97.2-97.2 97.2 97.2c9.3 9.3 24.5 9.3 33.9 0z"></path></svg>
+                    </a>
+                    <img class="form-avatar" src="../image/mf-avatar.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+
+    <header>
+        <div class="container">
+            <div class="header">
+                <h2>Want to discuss a startup collaboration? I'm most definitely game.</h2>
+            
+                <form class="form" action="">
+                    <div class="name-email">
+                        <label for="" class="label is-medium">
+                            Name
+                            <input type="text" placeholder="Name" class="input is-medium">
+                        </label>
+                        <label for="" class="label is-medium">
+                            Email
+                            <input type="email" placeholder="example@gmail.com" class="input is-medium">
+                        </label>
+                    </div>
+                    <div class="select-form">
+                        <label for="" class="label is-medium">
+                            Which project?
+                            <img class="select-icon" src="../image/arrow-down-sign-to-navigate.png" alt="">
+                            <select name="" id="" class="input is-medium">
+                                <option value="" class="option">Basin</option>
+                                <option value="" class="option">YL Builders</option>
+                                <option value="" class="option">Houston</option>
+                                <option value="" class="option">New project</option>
+                            </select>
+                            </label>
+                            <label for="" class="label is-medium">
+                                Your interest
+                                <img class="select-icon" src="../image/arrow-down-sign-to-navigate.png" alt="">
+                            <select name="" id="" class="input is-medium">
+                                <option value="" class="option">Collobrator</option>
+                                <option value="" class="option">Investor</option>
+                                <option value="" class="option">Co-Founder</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="textarea-label">
+                        <label for="" class="label is-medium">Additional details</label>
+                    <textarea name="" id="" cols="20" rows="6" class="textarea is-medium"></textarea>
+                    </div>
+                    <button class="button is-info is-medium is-outlined">Submit</button>
+                </form>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Footer section -->
+
+
+    <script src="../js/app.js"></script>
+
+</body>
+</html>
